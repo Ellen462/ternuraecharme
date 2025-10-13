@@ -63,7 +63,7 @@ body {
 
 .carrinho-contador {
   background-color: var(--salmon);
-  color: var(--cinza);
+  color: var(--branco);
   border-radius: 50%;
   padding: 2px 7px;
   font-size: 0.8rem;
