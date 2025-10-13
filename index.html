@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ateliê Ternura e Charme - Laços Artesanais</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <h1>Ateliê Ternura e Charme</h1>
+      <p>Laços feitos com amor para encantar seu dia! 💖</p>
+      <div class="carrinho-icon" id="carrinhoBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="carrinho-contador" id="carrinhoContador">0</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu">
+    <div class="container">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#historia">Nossa História</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="banner" id="inicio">
+    <div class="banner-content">
+      <h2>Laços que encantam</h2>
+      <p>Descubra nossa coleção exclusiva para todas as idades</p>
+      <a href="#produtos" class="botao">Ver Coleção</a>
+    </div>
+  </section>
+  
+
+  <section class="produtos" id="produtos">
+    <div class="container">
+      <h2>Nossos Laços</h2>
+      <div class="abas">
+        <button class="aba-link ativo" onclick="abrirAba(event, 'infantil')">Infantil</button>
+        <button class="aba-link" onclick="abrirAba(event, 'adulto')">Adulto</button>
+        <button class="aba-link" onclick="abrirAba(event, 'Pets')">Pets</button>
+      </div>
+
+      <div id="infantil" class="aba-conteudo ativo">
+        <div class="galeria">
+          <div class="card">
+            <img src="imagens/luxo i 2.png" alt="Laço Princesinha" />
+            <h3>Laço Princesinha</h3>
+            <p>Para dias mágicos e contos de fada se tornarem realidade.</p>
+            <p class="preco">R$ 15,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Princesinha', 15.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/luxo i 3.png" alt="Laço Fofura" />
+            <h3>Laço Fofura</h3>
+            <p>Perfeito para deixar qualquer look infantil ainda mais encantador.</p>
+            <p class="preco">R$ 18,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Fofura', 18.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/luxo i 4.png" alt="Laço Brincalhão" />
+            <h3>Laço Brincalhão</h3>
+            <p>Acompanha cada momento de diversão com estilo.</p>
+            <p class="preco">R$ 15,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Brincalhão', 16.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/luxo i 5.png" alt="Laço Arco-Íris" />
+            <h3>Laço Arco-Íris</h3>
+            <p>Um colorido de alegria para o seu pequeno sol.</p>
+            <p class="preco">R$ 16,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Arco-Íris', 16.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/boutique1.png" alt="Laço Travessura" />
+            <h3>Laço Travessura</h3>
+            <p>Para as pequenas aventuras cheias de graça!</p>
+            <p class="preco">R$ 15,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Travessura', 16.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/luxo infantil.png" alt="Laço Galáxia" />
+            <h3>Laço Galáxia</h3>
+            <p>Para sonhar alto e alcançar as estrelas.</p>
+            <p class="preco">R$ 18,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Galáxia', 16.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/simples 2.png" alt="Laço Alegria" />
+            <h3>Laço Alegria</h3>
+            <p>O acessório perfeito para um sorriso sem fim.</p>
+            <p class="preco">R$ 8,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Alegria', 16.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/simples i 1.png" alt="Laço Estrelinha" />
+            <h3>Laço Estrelinha</h3>
+            <p>Porque seu bebê brilha mais que todas.</p>
+            <p class="preco">R$ 10,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Estrelinha', 16.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="card">
+            <img src="imagens/parzinho1.png" alt="Parzinho Combina & Cria" />
+            <h3>Parzinho Combina & Cria</h3>
+            <p>Misture e combine para criar um estilo único a cada dia.</p>
+            <p class="preco">R$ 12,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Parzinho Combina & Cria', 12.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/parzinho2.png" alt="Parzinho Fofura Compartilhada" />
+            <h3>Parzinho Fofura Compartilhada</h3>
+            <p>Porque um laço é bom, mas dois são melhores!</p>
+            <p class="preco">R$ 10,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Parzinho Fofura Compartilhada', 14.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/parzinho3.png" alt="Parzinho Celebração" />
+            <h3>Parzinho Celebração</h3>
+            <p>Perfeito para looks de festa que precisam de um toque extra de alegria.</p>
+            <p class="preco">R$ 10,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Parzinho Celebração', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/parzinho4.png" alt="Parzinho Aventura em Dobro" />
+            <h3>Parzinho Aventura em Dobro</h3>
+            <p>Dois laços cheios de estilo para acompanhar seu dia a dia.</p>
+            <p class="preco">R$ 8,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Parzinho Aventura em Dobro', 13.90)">Adicionar ao Carrinho</button>
+          </div>
+         <div class="card">
+            <img src="imagens/tiara 1.png" alt="Tiara Aurora" />
+            <h3>Tiara Aurora</h3>
+            <p>Cores suaves que lembram o nascer do sol.</p>
+            <p class="preco">R$ 16,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Aurora', 12.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/tiara2.jpg" alt="Tiara Jardim Encantado" />
+            <h3>Tiara Jardim Encantado</h3>
+            <p>Cores e criatividade para um toque de conto de fadas.</p>
+            <p class="preco">R$ 14,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Jardim Encantado', 14.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/tiara4.jpg" alt="Tiara Imperatriz" />
+            <h3>Tiara Imperatriz</h3>
+            <p>Ousada e poderosa, para quem comanda o próprio mundo.</p>
+            <p class="preco">R$ 10,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Imperatriz', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/tiara5.jpg" alt=" Tiara Fada Madrinha" />
+            <h3> Tiara Fada Madrinha</h3>
+            <p>Para transformar seus desejos em realidade.</p>
+            <p class="preco">R$ 18,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho(' Tiara Fada Madrinha', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/tiara6.jpg" alt="Tiara Bailarina" />
+            <h3>Tiara Bailarina</h3>
+            <p>Graça e leveza em cada detalhe.</p>
+            <p class="preco">R$ 15,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Bailarina', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/tiara7.jpg" alt="Tiara Noite de Gala" />
+            <h3>Tiara Noite de Gala</h3>
+            <p>Máxima sofisticação e brilho para eventos memoráveis.</p>
+            <p class="preco">R$ 13,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Noite de Gala', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/tiara8.jpg" alt="Tiara Serenidade" />
+            <h3>Tiara Serenidade</h3>
+            <p>Beleza tranquila e atemporal.</p>
+            <p class="preco">R$ 13,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Serenidade', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/tiara9.jpg" alt="Tiara Éden" />
+            <h3>Tiara Éden</h3>
+            <p> Folhagens delicadas para uma beleza orgânica.</p>
+            <p class="preco">R$ 13,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Éden', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/tiara10.jpg" alt="Tiara Serenidade" />
+            <h3>Tiara Serenidade</h3>
+            <p>Beleza tranquila e atemporal.</p>
+            <p class="preco">R$ 13,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Tiara Serenidade', 13.90)">Adicionar ao Carrinho</button>
+          </div>
+          </div>
+       </div>
+      </div>
+
+      <div id="adulto" class="aba-conteudo">
+        <div class="galeria">
+          <div class="card">
+            <img src="imagens/adulto luxo 1.png" alt="Laço Jardim Secreto" />
+            <h3>Laço Jardim Secreto</h3>
+            <p>Um floreio romântico e misterioso.</p>
+            <p class="preco">R$ 24,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Jardim Secreto', 24.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/adulto luxo 2.png" alt="Laço CEO" />
+            <h3>Laço CEO</h3>
+            <p>Poder e elegância para conquistar o dia.</p>
+            <p class="preco">R$ 22,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço CEO', 22.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/adulto simples 1.png" alt="Laço Vanguardista" />
+            <h3>Laço Vanguardista</h3>
+            <p>Para quem não tem medo de ditar as regras da moda.</p>
+            <p class="preco">R$ 26,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Vanguardista', 26.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/adulto simples 2.png" alt="Laço Minimalista" />
+            <h3>Laço Minimalista</h3>
+            <p>Menos é mais, e mais é sofisticação. </p>
+            <p class="preco">R$ 26,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Minimalista', 26.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/adulto simples 3.png" alt="Laço Poesia" />
+            <h3>Laço Poesia</h3>
+            <p>Para compor looks que contam histórias.</p>
+            <p class="preco">R$ 26,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Poesia', 26.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/adulto simples 4.png" alt="Laço Serenata" />
+            <h3>Laço Serenata</h3>
+            <p>Elegância discreta para noites inesquecíveis.</p>
+            <p class="preco">R$ 26,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Serenata', 26.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/adulto simples 5.png" alt="Laço Cápsula do Tempo" />
+            <h3>Laço Cápsula do Tempo</h3>
+            <p>Um toque de nostalgia com um acabamento moderno</p>
+            <p class="preco">R$ 26,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Cápsula do Tempo', 26.90)">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="Pets" class="aba-conteudo">
+        <div class="galeria">
+          <div class="card">
+            <img src="imagens/pest1.jpg" alt="Laço Patinha Charmosa" />
+            <h3>Laço Patinha Charmosa</h3>
+            <p>Para seu pet arrasar no petisco e no estilo.</p>
+            <p class="preco">R$ 12,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Patinha Charmosa', 12.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/pet2.jpg" alt="Laço latido Elegante" />
+            <h3>Laço latido Elegante</h3>
+            <p>Porque os reis da casa também precisam de glamour.</p>
+            <p class="preco">R$ 14,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço latido Elegante', 14.90)">Adicionar ao Carrinho</button>
+          </div>
+          <div class="card">
+            <img src="imagens/pet3.jpg" alt="Laço Peludinho" />
+            <h3>Laço Peludinho</h3>
+            <p>Macio e confortável, como seu pet merece.</p>
+            <p class="preco">R$ 12,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Peludinho', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/pet4.jpg" alt="Laço Focinho Feliz" />
+            <h3>Laço Focinho Feliz</h3>
+            <p> A alegria tem um novo acessório.</p>
+            <p class="preco">R$ 13,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Focinho Feliz', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/pet5.jpg" alt="Laço Bigode Chic" />
+            <h3>Laço Bigode Chic</h3>
+            <p>Sofisticação canina em seu mais alto nível.</p>
+            <p class="preco">R$ 14,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Bigode Chic', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/pet6.jpg" alt=" Laço Latido Fashion" />
+            <h3> Laço Latido Fashion</h3>
+            <p>Um latido de moda para chamar de seu. </p>
+            <p class="preco">R$ 14,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho(' Laço Latido Fashion', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+          <div class="card">
+            <img src="imagens/pet7.jpg" alt="Laço Aventura Canina" />
+            <h3>Laço Aventura Canina</h3>
+            <p>Pronto para explorar o mundo (e o parque).</p>
+            <p class="preco">R$ 15,90</p>
+            <button class="botao-carrinho" onclick="adicionarAoCarrinho('Laço Aventura Canina', 13.90)">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="historia">
+    <div class="container">
+      <h2>Nossa História</h2>
+      <div class="historia-content">
+        <div class="historia-texto">
+          <p>O Ateliê Ternura e Charme nasceu do amor por transformar fios e tecidos em peças únicas que encantam. Tudo começou em 2025, quando nossa fundadora, Ellen, decidiu criar laços especiais para as filhas de uma amiga usar em seu casamento.</p>
+          <p>O carinho e dedicação colocados em cada peça fizeram com que os pedidos de amigas e familiares começassem a surgir. O que era um hobby tornou-se uma paixão que transformou-se em negócio.</p>
+          <p>Hoje, cada laço que produzimos carrega não apenas beleza, mas também histórias, amor e a personalidade de quem o usa. Do infantil ao adultoe até mesmo para os nossos queridos Pets, todos encontram aqui um pedacinho de charme para complementar seu estilo.</p>
+          <p>Nosso compromisso é continuar espalhando ternura através de nossas criações, sempre priorizando qualidade, originalidade e, claro, muito amor em cada detalhe.</p>
+        </div>
+        <div class="historia-imagem">
+          <img src="imagens/artesã trabalhando.jpg" alt="Artesã criando laços">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="depoimentos">
+    <div class="container">
+      <h2>O que nossas clientes <span>dizem</span></h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento">
+          <div class="depoimento-cabecalho">
+            <img src="imagens/cliente1.jpg" alt="Cliente Ana" loading="lazy"/>
+            <div>
+              <h4>Ana Clara</h4>
+              <div class="estrelas">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Comprei o planner personalizado e amei! A qualidade é incrível e recebi muitos elogios."</p>
+        </div>
+        
+        <div class="depoimento">
+          <div class="depoimento-cabecalho">
+            <img src="imagens/cliente2.jpg" alt="Cliente Juliana" loading="lazy"/>
+            <div>
+              <h4>Juliana</h4>
+              <div class="estrelas">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Os adesivos para minha filha ficaram perfeitos! Ela adorou colar em todos os cadernos."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Pronta para brilhar?</h2>
+      <p>Escolha seus laços favoritos e finalize seu pedido pelo WhatsApp</p>
+      <button class="botao" onclick="abrirCarrinho()">Finalizar Compra</button>
+    </div>
+  </section>
+
+  <footer class="rodape" id="contato">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Ateliê Ternura e Charme</h3>
+          <p>Laços feitos com carinho para todos os momentos especiais da vida.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p><i class="fab fa-whatsapp"></i> (91) 98435-1031</p>
+          <p><i class="far fa-envelope"></i> contato:ternuraecharme@gmail.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Redes Sociais</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/_ternuraecharme?igsh=bXNtc2JxbXNjZ25o"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ateliê Ternura e Charme. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal do Carrinho -->
+  <div id="carrinhoModal" class="modal">
+    <div class="modal-content">
+      <span class="fechar">&times;</span>
+      <h2>Seu Carrinho</h2>
+      <div id="carrinhoItens"></div>
+      <div class="carrinho-total">
+        <h3>Total: R$ <span id="carrinhoTotal">0,00</span></h3>
+      </div>
+      <button class="botao" onclick="finalizarPedido()">Finalizar Pedido pelo WhatsApp</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
