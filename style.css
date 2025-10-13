@@ -63,13 +63,14 @@ body {
 
 .carrinho-contador {
   background-color: var(--salmon);
-  color: var(--rosa-claro);
+  color: var(--cinza);
   border-radius: 50%;
   padding: 2px 7px;
   font-size: 0.8rem;
   position: absolute;
   top: -8px;
   right: -8px;
+  font-weight: bold; 
 }
 
 /* Menu */
